@@ -571,7 +571,10 @@ footer .credit a {
   }
 }
 
-
+.modal-container .close-icon {
+  position: absolute;
+  right: 1rem;
+}
 
 .modal-content {
   display: flex;
