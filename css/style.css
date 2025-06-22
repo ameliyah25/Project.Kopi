@@ -349,6 +349,10 @@ body {
 }
 .about .row .about-img img {
   width: 100%;
+  -webkit-mask-image: url(/img/splash\ cantik.svg);
+  -webkit-mask-size: 80%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 .about .row .content {
   flex: 1 1 35rem;
