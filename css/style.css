@@ -277,6 +277,12 @@ body {
   );
 } */
 
+.hero .mask-container {
+  position: absolute;
+  background-color: brown;
+  inset: 0;
+}
+
 .hero .content {
   padding: 1.4rem 7%;
   /* max-width: 60rem; */
