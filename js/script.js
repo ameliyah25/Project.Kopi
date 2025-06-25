@@ -37,7 +37,7 @@ document.addEventListener("click", function (e) {
   }
 
   if (!sc.contains(e.target) && !shoppingcart.contains(e.target)) {
-    shoppingcart.clasList.remove("active");
+    shoppingcart.classList.remove("active");
   }
 });
 
