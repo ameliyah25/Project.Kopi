@@ -451,7 +451,7 @@ body {
   height: 15rem;
 }
 .products .product-contend h3 {
-  font-size: 2rem;
+  font-size: 4rem;
 }
 .products .product-stars {
   font-size: 1.7rem;
@@ -464,11 +464,6 @@ body {
 .products .product-price {
   font-size: 1.3rem;
   font-weight: bold;
-}
-.products .product-price span {
-  text-decoration: line-through;
-  font-weight: lighter;
-  font-size: 1rem;
 }
 
 /* Contact section */
