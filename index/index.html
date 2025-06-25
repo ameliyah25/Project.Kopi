@@ -18,6 +18,15 @@
 
     <!--my style-->
     <link rel="stylesheet" href="/css/style.css" />
+
+    <!--AlpineJS-->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+
+    <!--App-->
+    <script src="/src/app.js"></script>
   </head>
 
   <body>
@@ -124,27 +133,27 @@
       </p>
       <div class="row">
         <div class="menu-card">
-          <img src="/img/1.jpg" alt="Espresso" class="menu-card-img" />
+          <img src="/img/kopi 1.jpg" alt="Espresso" class="menu-card-img" />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
         <div class="menu-card">
-          <img src="/img/1.jpg" alt="Espresso" class="menu-card-img" />
+          <img src="/img/kopi 1.jpg" alt="Espresso" class="menu-card-img" />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
         <div class="menu-card">
-          <img src="/img/1.jpg" alt="Espresso" class="menu-card-img" />
+          <img src="/img/kopi 1.jpg" alt="Espresso" class="menu-card-img" />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
         <div class="menu-card">
-          <img src="/img/1.jpg" alt="Espresso" class="menu-card-img" />
+          <img src="/img/kopi 1.jpg" alt="Espresso" class="menu-card-img" />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
         <div class="menu-card">
-          <img src="/img/1.jpg" alt="Espresso" class="menu-card-img" />
+          <img src="/img/kopi 1.jpg" alt="Espresso" class="menu-card-img" />
           <h3 class="menu-card-title">- Espresso -</h3>
           <p class="menu-card-price">IDR 15K</p>
         </div>
@@ -153,7 +162,7 @@
     <!-- Menu Section end -->
 
     <!-- Products section start -->
-    <section class="products" id="products">
+    <section class="products" id="products" x-data="products">
       <h2><span>Produk Unggulan</span> Kami</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut iure, animi
@@ -161,72 +170,30 @@
       </p>
 
       <div class="row">
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="/img/product 1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffee Beans 1</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
+        <template x-for="(item, index) in items" x-key="index">
+          <div class="product-card">
+            <div class="product-icons">
+              <a href="#"><i data-feather="shopping-cart"></i></a>
+              <a href="#" class="item-detail-button"
+                ><i data-feather="eye"></i
+              ></a>
             </div>
-            <div class="product-price">IDR 45K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#" class="item-detail-button"
-              ><i data-feather="eye"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="/img/product 1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffee Beans 2</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
+            <div class="product-image">
+              <img :src="`/img/products/${item.img}`" :alt="item.name" />
             </div>
-            <div class="product-price">IDR 40K <span>IDR 55K</span></div>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="product-icons">
-            <a href="#"><i data-feather="shopping-cart"></i></a>
-            <a href="#"
-              ><i data-feather="eye" class="item-detail-button"></i
-            ></a>
-          </div>
-          <div class="product-image">
-            <img src="/img/product 1.jpg" alt="Product 1" />
-          </div>
-          <div class="product-content">
-            <h3>Coffee Beans 3</h3>
-            <div class="product-stars">
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star" class="star-full"></i>
-              <i data-feather="star"></i>
-              <i data-feather="star"></i>
+            <div class="product-content">
+              <h3>COFFE BEANS 1</h3>
+              <div class="product-stars">
+                <i data-feather="star" class="star-full"></i>
+                <i data-feather="star" class="star-full"></i>
+                <i data-feather="star" class="star-full"></i>
+                <i data-feather="star" class="star-full"></i>
+                <i data-feather="star" class="star-full"></i>
+              </div>
+              <div class="product-price">IDR 45K <span>IDR 55K</span></div>
             </div>
-            <div class="product-price">IDR 30K <span>IDR 55K</span></div>
           </div>
-        </div>
+        </template>
       </div>
     </section>
     <!-- Products section end -->
